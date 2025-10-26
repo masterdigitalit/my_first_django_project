@@ -29,6 +29,7 @@ class Product(models.Model):
     image_url = models.URLField(verbose_name="Ссылка на изображение", max_length=500, null=False, blank=False)
     category = models.ForeignKey("Category", verbose_name="Категория",null=False, blank=False, on_delete=models.CASCADE)
     brand = models.ForeignKey("Brand", verbose_name="Бренд", null=False, blank=False, on_delete=models.CASCADE)
+    old_price = models.DecimalField(verbose_name="Старая цена", decimal_places=2, max_digits=9, null=True, blank=True)
 
     def __str__(self):
         return self.name

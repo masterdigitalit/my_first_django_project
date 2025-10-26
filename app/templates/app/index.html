@@ -16,6 +16,7 @@
             <div class="product-details">
                 <h2 class="product-name">{{ product.name }}</h2>
                 <p class="product-category">{{ product.brand.name }} / {{ product.category.name }}</p>
+                  <h2 class="product-desc">{{ product.description }}</h2>
                 <div class="product-price-block">
                     <span class="product-price">{{ product.price }} ₽</span>
                     {% if product.old_price %}
